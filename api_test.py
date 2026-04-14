@@ -146,5 +146,67 @@
 #     print("*" * i)
 # for i in range(1 , 6):
 #     print(" " * (5 - i) + "*" * i)
-for i in range(0, 5):
-    print(" " * i + "*" * (2*(5-i) - 1))
+# for i in range(0, 5):
+#     print(" " * i + "*" * (2*(5-i) - 1))
+# numbers = [10, 20, 30, 40]
+# print(numbers)
+# numbers = [1,3,5,7]
+# numbers.append(9)
+# print(numbers)
+# numbers = [1,2,4,6,3,7]
+# numbers.remove(4)
+# print(numbers)
+# numbers = [1,7,4,9,0,4,3,8]
+# numbers.sort()
+# print(numbers)
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+# num3 = int(input("Enter third number: "))
+
+# numbers = [num1, num2, num3]
+
+# print(numbers)
+# num1 = int(input("enter first number:"))
+# num2 = int(input("Enter second number: "))
+# num3 = int(input("Enter third number: "))
+# numbers = [num1, num2, num3]
+# largest = max(numbers)
+# smallest = min(numbers)
+# print("The maximun number is:", max(numbers))
+# print("The minimum number is:", min(numbers))
+# numbers = [1,2,3,4,6]
+# for num in numbers:
+#     print(num)
+# numbers = [1,2,3,4,6]
+# total = 0
+# for num in numbers:
+#     total += num
+# print("sum is:", total)
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+# for num in numbers:
+#     if num % 2 == 0:
+#         print(num)
+# numbers = []
+
+# for i in range(5):
+#     num = int(input("Enter number: "))
+#     numbers.append(num)
+
+# print(numbers)
+numbers = [1, 4, 7, 0, 3, 2, 6, 5]
+
+largest = numbers[0]
+
+for num in numbers:
+    if num > largest:
+        largest = num
+
+print("Largest number is:", largest)
+numbers = [1, 4, 7, 0, 3, 2, 6, 5]
+
+user_num = int(input("Enter a number: "))
+
+if user_num in numbers:
+    print("Number found")
+else:
+    print("Number not found")
