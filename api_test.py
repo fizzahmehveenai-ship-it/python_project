@@ -193,20 +193,144 @@
 #     numbers.append(num)
 
 # print(numbers)
-numbers = [1, 4, 7, 0, 3, 2, 6, 5]
+# numbers = [1, 4, 7, 0, 3, 2, 6, 5]
 
-largest = numbers[0]
+# largest = numbers[0]
 
-for num in numbers:
-    if num > largest:
-        largest = num
+# for num in numbers:
+#     if num > largest:
+#         largest = num
 
-print("Largest number is:", largest)
-numbers = [1, 4, 7, 0, 3, 2, 6, 5]
+# print("Largest number is:", largest)
+# numbers = [1, 4, 7, 0, 3, 2, 6, 5]
 
-user_num = int(input("Enter a number: "))
+# user_num = int(input("Enter a number: "))
 
-if user_num in numbers:
-    print("Number found")
-else:
-    print("Number not found")
+# if user_num in numbers:
+#     print("Number found")
+# else:
+#     print("Number not found")
+# numbers = []
+# total = 0
+# even_count = 0
+
+# input + list
+# for i in range(5):
+#     num = int(input("Enter a number: "))
+#     numbers.append(num)
+
+# print("Numbers:", numbers)
+
+# # sum + even count + largest
+# largest = numbers[0]
+
+# for num in numbers:
+#     total += num
+
+#     if num % 2 == 0:
+#         even_count += 1
+
+#     if num > largest:
+#         largest = num
+
+# print("Sum is:", total)
+# print("Even count:", even_count)
+# print("Largest number is:", largest)
+# numbers = []
+# odd_count = 0
+
+# # input
+# for i in range(5):
+#     num = int(input("Enter a number: "))
+#     numbers.append(num)
+
+# print("Numbers:", numbers)
+
+# smallest = numbers[0]
+# greater_than_10 = False
+
+# # processing
+# for num in numbers:
+    
+#     # odd count
+#     if num % 2 != 0:
+#         odd_count += 1
+    
+#     # smallest number
+#     if num < smallest:
+#         smallest = num
+    
+#     # check > 10
+#     if num > 10:
+#         greater_than_10 = True
+
+# print("Odd count:", odd_count)
+# print("Smallest number is:", smallest)
+
+# if greater_than_10:
+#     print("Number greater than 10 exists")
+# else:
+#     print("No number greater than 10")
+# def great():
+#     print("hello")
+# great()
+# def add(a , b):
+#     return a + b
+# result = add(4 , 8)
+# print(result)
+# def check_even_odd(num):
+#     if num % 2 == 0:
+#         print("even")
+#     else:
+#         print("odd")
+# check_even_odd(7)
+# def find_values(numbers):
+#     largest = numbers[0]
+#     smallest = numbers[0]
+
+#     for num in numbers:
+#         if num > largest:
+#             largest = num
+
+#         if num < smallest:
+#             smallest = num
+
+#     return largest, smallest
+
+
+# nums = [3, 5, 6, 7, 9]
+
+# largest, smallest = find_values(nums)
+
+# print("Largest is:", largest)
+# print("Smallest is:", smallest)
+# def check_even(num):
+#     if num % 2 == 0:
+#      print("even")
+#     else:
+#         print("odd")
+# check_even(7)
+# def check_even(num):
+#     if num % 2 == 0:
+#         return "even"
+#     else:
+#         return "odd"
+# result   = check_even(7)
+# print(result)
+# def check_even(num):
+#     if num % 2 == 0:
+#         return "even"
+#     else:
+#         return "odd"
+# numbers = [5,8,3,10,7]
+# for num in numbers:
+#     print(num , check_even(num))
+def count_odd(numbers):
+    count = 0
+    for num in numbers:
+        if num % 2 != 0:
+            count += 1
+    return count
+nums = [5, 8, 3, 10, 7]
+result = count_odd(nums)
+print("odd numbers count:", result)
