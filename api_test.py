@@ -325,12 +325,230 @@
 # numbers = [5,8,3,10,7]
 # for num in numbers:
 #     print(num , check_even(num))
-def count_odd(numbers):
-    count = 0
-    for num in numbers:
-        if num % 2 != 0:
-            count += 1
-    return count
-nums = [5, 8, 3, 10, 7]
-result = count_odd(nums)
-print("odd numbers count:", result)
+# def count_odd(numbers):
+#     count = 0
+#     for num in numbers:
+#         if num % 2 != 0:
+#             count += 1
+#     return count
+# nums = [5, 8, 3, 10, 7]
+# result = count_odd(nums)
+# print("odd numbers count:", result)
+# def analyze_numbers(numbers):
+#     total = 0
+#     even_count = 0
+#     odd_count = 0
+#     smallest = numbers[0]
+#     for num in numbers:
+#         total += num
+#     if num % 2 == 0:
+#         even_count += 1
+#     else:
+#         odd_count += 1
+#     if num < smallest:
+#         smallest = num
+#     return total,even_count,odd_count,smallest
+# nums =[5,8,3,10,7]
+# total , even ,odd , smallest = analyze_numbers(nums)
+# print("sum:",total)
+# print("Even count:",even)
+# print("Odd count:",odd)
+# print("smallest:",smallest)
+# def analyze_numbers(numbers):
+#     total = 0
+#     even_count = 0
+#     odd_count = 0
+#     largest = numbers[0]
+#     smallest = numbers[0]
+
+#     for num in numbers:
+#         total += num
+
+#         if num % 2 == 0:
+#             even_count += 1
+#         else:
+#             odd_count += 1
+
+#         if num > largest:
+#             largest = num
+
+#         if num < smallest:
+#             smallest = num
+
+#     return total, even_count, odd_count, largest, smallest
+
+
+# nums = [5, 8, 3, 10, 7]
+
+# total, even, odd, largest, smallest = analyze_numbers(nums)
+
+# print("Sum:", total)
+# print("Even count:", even)
+# print("Odd count:", odd)
+# print("Largest:", largest)
+# print("Smallest:", smallest)
+# numbers = (5,12,7)
+# print("first:", numbers[0])
+# print("last:", numbers[-1])
+# largest = numbers[0]
+
+# for num in numbers:
+#     if num > largest:
+#         largest = num
+
+# print("largest:", largest)
+# numbers = (10,20,30)
+# a , b , c = numbers
+# print(a)
+# print(b)
+# print(c)
+# def calculate(a, b):
+#     sum_result = a + b
+#     difference_result = a - b
+#     product = a * b
+#     result_division = a / b
+
+#     return sum_result,difference_result ,product , result_division
+
+
+# result_sum, result_difference, result_product, result_division = calculate(4, 5)
+
+# print("The sum is:", result_sum)
+# print("The difference is:",result_difference)
+# print("The product is:", result_product)
+# print("The  division is:", result_division)
+# num1 = int(input("enter first number:"))
+# num2 = int(input("enter second number:"))
+# def calculate(a,b):
+#     sum_result = a + b
+#     difference = a - b
+#     product = a * b
+#     if b != 0:
+#         division =  a / b
+#     else:
+#         division = "not allowed"
+#     return sum_result , difference , product , division
+# sum_result , difference , product , division = calculate(num1,num2)
+# print("sum_result:", sum_result)
+# print("difference:", difference)
+# print("product:", product)
+# print("division:",division)
+# menu based calculator:
+# print("1. Add")
+# print("2. Subtract")
+# print("3. Multiply")
+# print("4. Division")
+# choice = int(input("enter a choice(1-4):"))
+# num1 = int(input("enter first number:"))
+# num2 = int(input("enter second number:"))
+# if choice == 1:
+#     print("result:", num1 + num2)
+# elif choice == 2:
+#     print("result:", num1 - num2)
+# elif choice == 3:
+#     print("result:", num1 * num2)
+# elif choice == 4:
+#     if num1 != 0:
+#         print("result:",num1 / num2)
+#     else:
+#         print("Division not allowed")
+# else:
+#     print("invalid choice")      
+# def calculator(choice, num1, num2):
+
+#     if choice == 1:
+#         return num1 + num2
+
+#     elif choice == 2:
+#         return num1 - num2
+
+#     elif choice == 3:
+#         return num1 * num2
+
+#     elif choice == 4:
+#         if num2 != 0:
+#             return num1 / num2
+#         else:
+#             return "Division not allowed"
+
+#     else:
+#         return "Invalid choice"
+
+
+# while True:
+#     print("\n1. Add")
+#     print("2. Subtract")
+#     print("3. Multiply")
+#     print("4. Division")
+#     print("5. Exit")
+
+#     choice = int(input("Enter a choice: "))
+
+#     if choice == 5:
+#         print("Calculator closed")
+#         break
+
+#     num1 = int(input("Enter first number: "))
+#     num2 = int(input("Enter second number: "))
+
+#     result = calculator(choice, num1, num2)
+
+#     print("Result:", result)
+# def calculator(choice, num1, num2):
+#     if choice == 1:
+#         return num1 + num2
+
+#     elif choice == 2:
+#         return num1 - num2
+
+#     elif choice == 3:
+#         return num1 * num2
+
+#     elif choice == 4:
+#         if num2 != 0:
+#             return num1 / num2
+#         else:
+#             return "Division not allowed"
+
+#     else:
+#         return "Invalid choice"
+# history = []
+# while True:
+#     print("\n1. Add")
+#     print("2. Subtract")
+#     print("3. Multiply")
+#     print("4. Division")
+#     print("5. show history")
+#     print("6. Exit")
+
+#     choice = int(input("Enter a choice: "))
+
+#     if choice == 6:
+#         print("Calculator closed")
+#         break
+#     if choice == 5:
+#         print("History",history)
+#         continue
+#     num1 = int(input("Enter first number: "))
+#     num2 = int(input("Enter second number: "))
+
+#     result = calculator(choice, num1, num2)
+
+#     print("Result:", result)
+#     history.append(result)   # result save ho raha hai
+
+#     again = input("Do you want to continue? (yes/no): ")
+
+#     if again.lower() != "yes":
+#         print("Calculator closed")
+#         break
+# Dictionary:
+student = {
+    "name" : "fiza",
+    "age"  : 18,
+    "city" : "vehari",
+}
+student["class"] = "1st year"
+student["age"] = 19
+del student["city"]
+print(student)
