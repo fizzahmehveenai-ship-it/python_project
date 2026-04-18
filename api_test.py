@@ -543,12 +543,212 @@
 #         print("Calculator closed")
 #         break
 # Dictionary:
-student = {
-    "name" : "fiza",
-    "age"  : 18,
-    "city" : "vehari",
-}
-student["class"] = "1st year"
-student["age"] = 19
-del student["city"]
-print(student)
+# student = {
+#     "name" : "fiza",
+#    "age"  : 18,
+#     "city" : "vehari",
+#  }
+# student["class"] = "1st year"
+# student["age"] = 19
+# del student["city"]
+# print(student)
+# for key, value in student.items():
+#     print(key, ":", value)
+# name =input("enter your name:")
+# age = input("enter your age:")
+# student = {
+#     "name" : name,
+#     "age"  :  age,
+# }
+# for key, value in student.items():
+#     print(key, ":", value)
+# users = [
+#     {"username" : "fizzah" , "password" : "123"},
+#     {"username" : "ali" , "password" : "456"}
+# ]
+
+# username = input("Enter username:")
+# password = input("Enter password:")
+# found = False
+# for user in users:
+#  if username == user["username"] and password == user["password"]:
+#     print("login succesful")
+#     found = True
+#     break
+# if not found:
+#     print("wrong login")
+# real login app
+# users = [
+#     {"username": "fiza", "password": "123"},
+#     {"username": "ali", "password": "456"}
+# ]
+
+# while True:
+#     print("\n1. Login")
+#     print("2. Signup")
+#     print("3. Exit")
+
+#     choice = input("Enter choice: ")
+
+#     # 🔐 LOGIN
+#     if choice == "1":
+#         attempts = 3
+
+#         while attempts > 0:
+#             username = input("Enter username: ")
+#             password = input("Enter password: ")
+
+#             found = False
+
+#             for user in users:
+#                 if user["username"] == username and user["password"] == password:
+#                     print("Login successful")
+#                     found = True
+#                     break
+
+#             if found:
+#                 break
+#             else:
+#                 attempts -= 1
+#                 print("Wrong login")
+#                 print("Attempts left:", attempts)
+
+#         if attempts == 0:
+#             print("Account locked")
+
+#     # 🆕 SIGNUP
+#     elif choice == "2":
+#         new_username = input("Create username: ")
+#         new_password = input("Create password: ")
+
+#         users.append({
+#             "username": new_username,
+#             "password": new_password
+#         })
+
+#         print("Signup successful")
+
+#     # ❌ EXIT
+#     elif choice == "3":
+#         print("Program closed")
+#         break
+
+#     else:
+#         print("Invalid choice")
+# class LoginSystem:
+#     def __init__(self):
+#         self.users = [
+#             {"username": "fiza", "password": "123"},
+#         ]
+
+#     def login(self):
+#         username = input("Enter username: ")
+#         password = input("Enter password: ")
+
+#         for user in self.users:
+#             if user["username"] == username and user["password"] == password:
+#                 print("Login successful")
+#                 return
+
+#         print("Wrong password")
+
+#     def signup(self):
+#         new_username = input("Create username: ")
+#         new_password = input("Create password: ")
+
+#         self.users.append({
+#             "username": new_username,
+#             "password": new_password
+#         })
+
+#         print("Signup successful")
+
+#     def menu(self):
+#         while True:
+#             print("\n1. Login")
+#             print("2. Signup")
+#             print("3. Exit")
+
+#             choice = input("Enter choice: ")
+
+#             if choice == "1":
+#                 self.login()
+
+#             elif choice == "2":
+#                 self.signup()
+
+#             elif choice == "3":
+#                 print("Program closed")
+#                 break
+
+#             else:
+#                 print("Invalid choice")
+
+
+# system = LoginSystem()
+# system.menu()
+
+                # Practice Question:
+
+# name  = input("enter your name:")
+# age = input("enter your age:")
+# city = input("enter your city:")
+# print("name:" , name)
+# print("age:", age)
+# print("city:", city)
+# num1 = int(input("enter first number:"))
+# num2 = int(input("enter second number:"))
+# print("add:", num1 + num2)
+# print("sub:", num1 - num2)
+# print("mul:", num1 * num2)
+# print("div:", num1 / num2)
+# a = int(input("enter a number:"))
+# if a > 0:
+#    print(" positive:")
+# elif a < 0:
+#    print("Negative:")
+# else:
+#  print("zero:")
+# marks = int(input("enter a number:"))
+# if marks >= 80:
+#    print("A")
+# elif marks >= 60:
+#    print("B")
+# elif marks >= 50:
+#    print("C")
+# else:
+#    print("Fail")
+# a = int(input("enter first number:"))
+# b = int(input("enter second number:"))
+# c = int(input("enter third number:"))
+# if a >= b and a >= c:
+#     print(a ,"is greatest:")
+# elif b >= c and b >= a:
+#     print(b ,"is greatest:")
+# else:
+#     print(c, "is greatest:")
+# for i in range(2 , 21 , 2):
+#     print(i)
+# for i in range(10 , 0 ,-1):
+    # print(i)
+# for i in range(1,6):
+#     print("*" * i)
+# numbers = []
+# for i in range(5):
+#     num = int(input("enter a number:"))
+#     numbers.append(num)
+# print(numbers)
+# numbers = [1,2,3,4,5]
+# total = 0
+# even_count = 0
+# largest = numbers[0]
+# for num in numbers:
+#     total += num
+#     if num % 2 == 0:
+#      even_count += 1
+#     if num > largest:
+#      largest = num
+# print("sum:", total)
+# print("even_count:", even_count)
+# print("largest:", largest)
+
