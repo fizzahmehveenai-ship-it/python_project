@@ -751,4 +751,85 @@
 # print("sum:", total)
 # print("even_count:", even_count)
 # print("largest:", largest)
-
+# class calculator:
+#     def add(self , a , b):
+#         return a + b
+#     def mul(self , a , b):
+#         return a * b
+# calc = calculator()
+# print(calc.add(2 , 5))
+# print(calc.mul(2 , 5))
+      
+# class student :
+#     def __init__(self , name , age , city):
+#         self.name = name
+#         self.age = age
+#         self.city = city
+#     def display(self):
+#         print("name:", self.name)
+#         print("age:", self.age)
+#         print("city:", self.city)
+# s1 = student("fiza", 18 , "vehari")
+# s2 = student("ali", 19 , "lahore")
+# s1.display()
+# s2.display()
+# class student:
+#     def __init__(self , name , marks1 , marks2 , marks3 ):
+#         self.name = name
+#         self.m1 = marks1
+#         self.m2 = marks2
+#         self.m3 = marks3
+#     def total(self):
+#         total = (self.m1 + self.m2 + self.m3)
+#         print("name:", self.name)
+#         print("total:", total)
+#     def average(self):
+#         average  =  (self.m1 + self.m2 + self.m3)/3
+#         print("average:", average)
+# s1 = student("fiza" , 20 , 40 , 50)
+# s2 = student("ali" , 30 , 60 , 50)
+# s1.total()
+# s2.average()
+# 
+# class Student:
+#     def __init__(self, name, marks1, marks2, marks3):
+#         self.name = name
+#         self.m1 = marks1
+#         self.m2 = marks2
+#         self.m3 = marks3
+#     def total(self):
+#         return self.m1 + self.m2 + self.m3
+#     def average(self):
+#         return (self.m1 + self.m2 + self.m3) / 3
+# s1 = Student("Fiza", 20, 40, 50)
+# s2 = Student("Ali", 30, 60, 50)
+# t = s1.total()
+# a = s2.average()
+# print("Total:", t)
+# print("Average:", a)
+class Student:
+    def __init__(self, name, m1, m2, m3):
+        self.name = name
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+    def total(self):
+        return self.m1 + self.m2 + self.m3
+    def average(self):
+        return (self.m1 + self.m2 + self.m3) / 3
+    def result(self):
+        avg = self.average()
+        if avg >= 50:
+            return "Pass"
+        else:
+            return "Fail"
+    def display(self):
+        print("Name:", self.name)
+        print("Total:", self.total())
+        print("Average:", self.average())
+        print("Result:", self.result())
+s1 = Student("Fiza", 60, 70, 80)
+s2 = Student("Ali", 30, 40, 20)
+s1.display()
+print("------")
+s2.display()
