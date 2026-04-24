@@ -807,29 +807,86 @@
 # a = s2.average()
 # print("Total:", t)
 # print("Average:", a)
-class Student:
-    def __init__(self, name, m1, m2, m3):
-        self.name = name
-        self.m1 = m1
-        self.m2 = m2
-        self.m3 = m3
-    def total(self):
-        return self.m1 + self.m2 + self.m3
-    def average(self):
-        return (self.m1 + self.m2 + self.m3) / 3
-    def result(self):
-        avg = self.average()
-        if avg >= 50:
-            return "Pass"
-        else:
-            return "Fail"
-    def display(self):
-        print("Name:", self.name)
-        print("Total:", self.total())
-        print("Average:", self.average())
-        print("Result:", self.result())
-s1 = Student("Fiza", 60, 70, 80)
-s2 = Student("Ali", 30, 40, 20)
-s1.display()
-print("------")
-s2.display()
+# class Student:
+#     def __init__(self, name, m1, m2, m3):
+#         self.name = name
+#         self.m1 = m1
+#         self.m2 = m2
+#         self.m3 = m3
+#     def total(self):
+#         return self.m1 + self.m2 + self.m3
+#     def average(self):
+#         return (self.m1 + self.m2 + self.m3) / 3
+#     def result(self):
+#         avg = self.average()
+#         if avg >= 50:
+#             return "Pass"
+#         else:
+#             return "Fail"
+#     def display(self):
+#         print("Name:", self.name)
+#         print("Total:", self.total())
+#         print("Average:", self.average())
+#         print("Result:", self.result())
+# s1 = Student("Fiza", 60, 70, 80)
+# s2 = Student("Ali", 30, 40, 20)
+# s1.display()
+# print("------")
+# s2.display()
+# name = input("Enter your name: ")
+# file = open("data.txt", "w")
+# file.write(name)
+# file.close()
+# file = open("data.txt", "r")
+# data = file.read()
+# print(data)
+# file.close()
+# username = input("Enter username: ")
+# password = input("Enter password: ")
+# with open("users.txt", "a") as file:
+#     file.write(username + "," + password + "\n")
+# print("Saved!")
+# with open("users.txt", "r") as file:
+#     data = file.read()
+# print(data)
+# username = input("Enter username: ")
+# password = input("Enter password: ")
+# found = False
+# with open("users.txt", "r") as file:
+#     for line in file:
+#         user, pwd = line.strip().split(",")
+#         if user == username and pwd == password:
+#             print("Login successful")
+#             found = True
+#             break
+# if not found:
+#     print("Wrong login")
+while True:
+    print("\n1. Signup")
+    print("2. Login")
+    print("3. Exit")
+    choice = input("Enter choice: ")
+    if choice == "1":
+        username = input("Create username: ")
+        password = input("Create password: ")
+        with open("users.txt", "a") as file:
+            file.write(username + "," + password + "\n")
+        print("Signup successful")
+    elif choice == "2":
+        username = input("Enter username: ")
+        password = input("Enter password: ")
+        found = False
+        with open("users.txt", "r") as file:
+            for line in file:
+                user, pwd = line.strip().split(",")
+                if user == username and pwd == password:
+                    print("Login successful")
+                    found = True
+                    break
+        if not found:
+            print("Wrong login")
+    elif choice == "3":
+        print("Program closed")
+        break
+    else:
+        print("Invalid choice")
