@@ -861,32 +861,131 @@
 #             break
 # if not found:
 #     print("Wrong login")
-while True:
-    print("\n1. Signup")
-    print("2. Login")
-    print("3. Exit")
-    choice = input("Enter choice: ")
-    if choice == "1":
+# while True:
+#     print("\n1. Signup")
+#     print("2. Login")
+#     print("3. Exit")
+#     choice = input("Enter choice: ")
+#     if choice == "1":
+#         username = input("Create username: ")
+#         password = input("Create password: ")
+#         with open("users.txt", "a") as file:
+#             file.write(username + "," + password + "\n")
+#         print("Signup successful")
+#     elif choice == "2":
+#         username = input("Enter username: ")
+#         password = input("Enter password: ")
+#         found = False
+#         with open("users.txt", "r") as file:
+#             for line in file:
+#                 user, pwd = line.strip().split(",")
+#                 if user == username and pwd == password:
+#                     print("Login successful")
+#                     found = True
+#                     break
+#         if not found:
+#              print("Wrong login")
+#     elif choice == "3":
+#         print("Program closed")
+#         break
+#     else:
+#         print("Invalid choice")
+# try:
+#     a = int(input("enter first number:"))
+#     b = int(input("enter second number:"))
+#     result = a / b
+# except ZeroDivisionError:
+#     print("cannot divided by zero:")
+# except ValueError:
+#     print("invalid input:")
+# else:
+#     print("result:", result)
+# finally:
+#     print("program finished")
+# num = int(input("enter number:"))
+# if num < 0:
+#     raise ValueError("Negative number are not allowed:")
+#     print("Valid number")
+# while True:
+#     print("\n1. Add")
+#     print("2 . subtract")
+#     print("3 . multiply")
+#     print("4 . divide")
+#     print("5. Exit")
+#     choice = input("Enter choice:")
+#     if choice == "5":
+#      print("calculator closed")
+#     break
+# try:
+#     num1 = int(input("enter first number:"))
+#     num2 = int(input("enter second number:"))
+#     if choice == "1":
+#         print("result:", num1 + num2)
+#     elif choice == "2":
+#         print("result:", num1 - num2)
+#     elif choice == "3":
+#         print("result:", num1 * num2)
+#     elif choice == "4":
+#         if num2 == 0:
+#                 raise ZeroDivisionError("Cannot divide by zero")
+#         print("Result:", num1 / num2)
+
+#     else:
+#             print("Invalid choice")
+# except ValueError:
+#      print("invalid input (numbers only)")
+# except ZeroDivisionError as e:
+#      print("Error:", e)
+# finally:
+#      print("operation finished")
+from getpass import getpass
+
+class UserSystem:
+    def signup(self):
         username = input("Create username: ")
-        password = input("Create password: ")
-        with open("users.txt", "a") as file:
+        try:
+            with open("user.txt", "r") as file:
+                for line in file:
+                    user, pwd = line.strip().split(",")
+                    if user == username:
+                        print("Username already exists")
+                        return
+        except FileNotFoundError:
+            pass
+        password = getpass("Create password: ")
+        with open("user.txt", "a") as file:
             file.write(username + "," + password + "\n")
         print("Signup successful")
-    elif choice == "2":
+    def login(self):
         username = input("Enter username: ")
-        password = input("Enter password: ")
+        password = getpass("Enter password: ")
         found = False
-        with open("users.txt", "r") as file:
-            for line in file:
-                user, pwd = line.strip().split(",")
-                if user == username and pwd == password:
-                    print("Login successful")
-                    found = True
-                    break
+        try:
+            with open("user.txt", "r") as file:
+                for line in file:
+                    user, pwd = line.strip().split(",")
+                    if user == username and pwd == password:
+                        print("Login successful")
+                        found = True
+                        break
+        except FileNotFoundError:
+            print("No users found")
         if not found:
             print("Wrong login")
-    elif choice == "3":
-        print("Program closed")
-        break
-    else:
-        print("Invalid choice")
+    def menu(self):
+        while True:
+            print("\n1. Signup")
+            print("2. Login")
+            print("3. Exit")
+            choice = input("Enter choice: ")
+            if choice == "1":
+                self.signup()
+            elif choice == "2":
+                self.login()
+            elif choice == "3":
+                print("Program closed")
+                break
+            else:
+                print("Invalid choice")
+system = UserSystem()
+system.menu()
