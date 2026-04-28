@@ -938,54 +938,74 @@
 #      print("Error:", e)
 # finally:
 #      print("operation finished")
-from getpass import getpass
+# from getpass import getpass
 
-class UserSystem:
-    def signup(self):
-        username = input("Create username: ")
-        try:
-            with open("user.txt", "r") as file:
-                for line in file:
-                    user, pwd = line.strip().split(",")
-                    if user == username:
-                        print("Username already exists")
-                        return
-        except FileNotFoundError:
-            pass
-        password = getpass("Create password: ")
-        with open("user.txt", "a") as file:
-            file.write(username + "," + password + "\n")
-        print("Signup successful")
-    def login(self):
-        username = input("Enter username: ")
-        password = getpass("Enter password: ")
-        found = False
-        try:
-            with open("user.txt", "r") as file:
-                for line in file:
-                    user, pwd = line.strip().split(",")
-                    if user == username and pwd == password:
-                        print("Login successful")
-                        found = True
-                        break
-        except FileNotFoundError:
-            print("No users found")
-        if not found:
-            print("Wrong login")
-    def menu(self):
-        while True:
-            print("\n1. Signup")
-            print("2. Login")
-            print("3. Exit")
-            choice = input("Enter choice: ")
-            if choice == "1":
-                self.signup()
-            elif choice == "2":
-                self.login()
-            elif choice == "3":
-                print("Program closed")
-                break
-            else:
-                print("Invalid choice")
-system = UserSystem()
-system.menu()
+# class UserSystem:
+#     def signup(self):
+#         username = input("Create username: ")
+#         try:
+#             with open("user.txt", "r") as file:
+#                 for line in file:
+#                     user, pwd = line.strip().split(",")
+#                     if user == username:
+#                         print("Username already exists")
+#                         return
+#         except FileNotFoundError:
+#             pass
+#         password = getpass("Create password: ")
+#         with open("user.txt", "a") as file:
+#             file.write(username + "," + password + "\n")
+#         print("Signup successful")
+#     def login(self):
+#         username = input("Enter username: ")
+#         password = getpass("Enter password: ")
+#         found = False
+#         try:
+#             with open("user.txt", "r") as file:
+#                 for line in file:
+#                     user, pwd = line.strip().split(",")
+#                     if user == username and pwd == password:
+#                         print("Login successful")
+#                         found = True
+#                         break
+#         except FileNotFoundError:
+#             print("No users found")
+#         if not found:
+#             print("Wrong login")
+#     def menu(self):
+#         while True:
+#             print("\n1. Signup")
+#             print("2. Login")
+#             print("3. Exit")
+#             choice = input("Enter choice: ")
+#             if choice == "1":
+#                 self.signup()
+#             elif choice == "2":
+#                 self.login()
+#             elif choice == "3":
+#                 print("Program closed")
+#                 break
+#             else:
+#                 print("Invalid choice")
+# system = UserSystem()
+# system.menu()
+name = input("Enter your name: ")
+
+while True:
+    user = input(f"{name}: ").lower()
+
+    if "hello" in user:
+        print("Bot: Hi! How can I help you?")
+    
+    elif "price" in user:
+        print("Bot: Bangles price is 300 PKR")
+    
+    elif "order" in user:
+        print("Bot: Please contact 030XXXXXXX")
+    
+    elif "bye" in user:
+        print("Bot: Goodbye!")
+        break
+    
+    else:
+        print("Bot: Please ask something else")
