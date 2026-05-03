@@ -989,23 +989,122 @@
 #                 print("Invalid choice")
 # system = UserSystem()
 # system.menu()
-name = input("Enter your name: ")
+# name = input("Enter your name: ")
 
-while True:
-    user = input(f"{name}: ").lower()
+# while True:
+#     user = input(f"{name}: ").lower()
 
-    if "hello" in user:
-        print("Bot: Hi! How can I help you?")
+#     if "hello" in user:
+#         print("Bot: Hi! How can I help you?")
     
-    elif "price" in user:
-        print("Bot: Bangles price is 300 PKR")
+#     elif "price" in user:
+#         print("Bot: Bangles price is 300 PKR")
     
-    elif "order" in user:
-        print("Bot: Please contact 030XXXXXXX")
+#     elif "order" in user:
+#         print("Bot: Please contact 030XXXXXXX")
     
-    elif "bye" in user:
-        print("Bot: Goodbye!")
-        break
+#     elif "bye" in user:
+#         print("Bot: Goodbye!")
+#         break
     
-    else:
-        print("Bot: Please ask something else")
+#     else:
+#         print("Bot: Please ask something else")
+# import tkinter as tk
+# window = tk.Tk()
+# label = tk.Label(window , text = "Hello Fiza")
+# label.pack()
+# window.mainloop()
+# import tkinter as tk
+# window = tk.Tk()
+# def click():
+#     print("Button clicked")
+# button = tk.Button(window, text="Click Me", command=click)
+# button.pack()
+# window.mainloop()
+# import tkinter as  tk
+# window = tk.Tk()
+# entry = tk.Entry(window)
+# entry.pack()
+# def show():
+#    print(entry.get())
+# Button = tk.Button(window , text = "show", command = show)
+# Button.pack()
+# window.mainloop()
+# import tkinter as tk
+# window = tk.Tk()
+# window.title("Calculator")
+# entry1 = tk.Entry(window)
+# entry1.pack()
+# entry2 = tk.Entry(window)
+# entry2.pack()
+# result_label = tk.Label(window , text = "Result will appear here")
+# result_label.pack()
+# def add():
+#     num1 = int(entry1.get())
+#     num2 = int(entry2.get())
+#     result_label.config(text="Result: " + str(num1 + num2))
+
+# def sub():
+#     num1 = int(entry1.get())
+#     num2 = int(entry2.get())
+#     result_label.config(text="Result: " + str(num1 - num2))
+# def mul():
+#     num1 = int(entry1.get())
+#     num2 = int(entry2.get())
+#     result_label.config(text="Result: " + str(num1 * num2))
+# def div():
+#     num1 = int(entry1.get())
+#     num2 = int(entry2.get())
+#     if num2 == 0:
+#         result_label.config(text="Cannot divide by zero")
+#     else:
+#         result_label.config(text="Result: " + str(num1 / num2))
+# button = tk.Button(window , text = "Add" , command = add)
+# button.pack()
+# button = tk.Button(window , text = "Subtract" , command = sub)
+# button.pack()
+# button = tk.Button(window , text = "Multiply" , command = mul)
+# button.pack()
+# button = tk.Button(window , text = "Divide" , command = div)
+# button.pack()
+# window.mainloop()
+import tkinter as tk
+window = tk.Tk()
+window.title("Pro Calculator")
+window.geometry("300x300")
+entry1 = tk.Entry(window)
+entry1.pack(pady=5)
+entry2 = tk.Entry(window)
+entry2.pack(pady=5)
+result_label = tk.Label(window, text = "Result will appear here")
+result_label.pack(pady=5)
+def calculator(op):
+    try:
+        num1 = float(entry1.get())
+        num2 = float(entry2.get())
+        if op == "Add":
+            result = num1 + num2
+        elif op == "Subtract":
+            result = num1 - num2
+        elif op == "Multiply":
+            result = num1 * num2
+        elif op == "Divide":
+            if num2 == 0:
+                result_label.config(text="Cannot divide by zero")
+                return
+            result = num1 / num2
+        result_label.config(text="Result: " + str(result))
+    except ValueError:
+        result_label.config(text = "enter valid numbers")   
+def clear():
+        entry1.delete(0, tk.END)
+        entry2.delete(0, tk.END)
+        result_label.config(text="Result will appear here")
+frame = tk.Frame(window)
+frame.pack(pady=5)
+tk.Button(frame, text="Add", command=lambda: calculator("Add")).pack(side=tk.LEFT, padx=5)
+tk.Button(frame, text="Subtract", command=lambda: calculator("Subtract")).pack(side=tk.LEFT, padx=5)
+tk.Button(frame, text="Multiply", command=lambda: calculator("Multiply")).pack(side=tk.LEFT, padx=5)
+tk.Button(frame, text="Divide", command=lambda: calculator("Divide")).pack(side=tk.LEFT, padx=5)
+tk.Button(window, text="Clear", command=clear).pack(pady=10)
+window.mainloop()
