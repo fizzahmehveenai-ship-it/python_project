@@ -989,26 +989,6 @@
 #                 print("Invalid choice")
 # system = UserSystem()
 # system.menu()
-# name = input("Enter your name: ")
-
-# while True:
-#     user = input(f"{name}: ").lower()
-
-#     if "hello" in user:
-#         print("Bot: Hi! How can I help you?")
-    
-#     elif "price" in user:
-#         print("Bot: Bangles price is 300 PKR")
-    
-#     elif "order" in user:
-#         print("Bot: Please contact 030XXXXXXX")
-    
-#     elif "bye" in user:
-#         print("Bot: Goodbye!")
-#         break
-    
-#     else:
-#         print("Bot: Please ask something else")
 # import tkinter as tk
 # window = tk.Tk()
 # label = tk.Label(window , text = "Hello Fiza")
