@@ -1088,3 +1088,169 @@
 # tk.Button(frame, text="Divide", command=lambda: calculator("Divide")).pack(side=tk.LEFT, padx=5)
 # tk.Button(window, text="Clear", command=clear).pack(pady=10)
 # window.mainloop()
+# def add_student():
+#     name = input("Enter student name: ")
+#     marks = int(input("Enter marks: "))
+#     with open("student.txt", "a") as file:
+#         file.write(name + "," + str(marks) + "\n")
+#     print("Student added successfully")
+# def view_students():
+#     try:
+#         with open("student.txt", "r") as file:
+#             data = file.readlines()
+#         if not data:
+#             print("No student records found")
+#         else:
+#             for line in data:
+#                     name, marks = line.strip().split(",")
+#                     print("Name:", name, "| Marks:", marks)
+#     except FileNotFoundError:
+#         print("File not found")
+# def search_student():
+#     search_name = input("Enter student name to search: ")
+#     try:
+#         with open("student.txt", "r") as file:
+#             found = False
+#             for line in file:
+#                 name, marks = line.strip().split(",")
+#                 if name.lower() == search_name.lower():
+#                     print("Student Found")
+#                     print("Name:", name)
+#                     print("Marks:", marks)
+#                     found = True
+#                     break
+#             if not found:
+#                 print("Student not found")
+
+#     except FileNotFoundError:
+#         print("File not found")
+# def delete_student():
+#     delete_name = input("Enter student name to delete:")    
+#     try:
+#              with open("student.txt", "r") as file:
+#                 data = file.readlines()
+#                 found = False
+#              with open("student.txt", "w") as file:
+#                 for line in data:
+#                   name , marks = line.strip().split(",")
+#                 if name.lower() != delete_name.lower():
+#                     file.write(line)
+#                 else:
+#                     found = True
+#                 if found:
+#                     print("student deleted successfully")
+#                 else:
+#                     print("student not found")
+#     except FileNotFoundError:
+#         print("file not found")
+# while True:
+#     print("\n1. Add Student")
+#     print("2. View Students")
+#     print("3. Search Student")
+#     print("4. Delete Student")
+#     print("5. Exit")
+#     print()
+#     choice = input("Enter your choice: ")
+#     if choice == "1":
+#         add_student()
+#     elif choice == "2":
+#         view_students()
+#     elif choice == "3":
+#         search_student()
+#     elif choice == "4":
+#         delete_student()
+#     elif choice == "5":
+#         print("Program closed")
+#     break
+# else:
+#         print("Invalid choice")
+# import tkinter as tk
+# window = tk.Tk()
+# window.title("Student management system")
+# window.geometry("400x400")
+# title = tk.Label(window , text = "Student management system" )
+# title.pack(pady = 10)
+# name_Label = tk.Label(window , text ="Enter student name:")
+# name_Label.pack(pady = 5)
+# name_entry = tk.Entry(window)
+# name_entry.pack(pady = 5)
+# marks_Label = tk.Label(window , text ="Enter student marks:")
+# marks_Label.pack(pady = 5)
+# marks_entry = tk.Entry(window)
+# marks_entry.pack(pady = 5)
+# window.mainloop()
+def add_books():
+    title = input("enter book title:")
+    author = input("enter book author:")
+    with open("books.txt" , "a") as file:
+        file.write(title + "," + author + "\n")
+    print("Book added successfully:")
+def view_books():
+    try:
+        with open("books.txt" ,"r") as file:
+            data = file.readlines()
+            if not data:
+                print("no books found")
+            else:
+                for line in data:
+                    title , author = line.strip().split(",")
+                    print("book:", title , "| author:", author)
+    except FileNotFoundError:
+        print("File not found")
+def search_books():
+    search_title = input("enter book title to search:")
+    try:
+        with open("books.txt" , "r") as file:
+            found = False
+            for line in file:
+                title , author = line.strip().split(",")
+                if title.lower() == search_title.lower():
+                    print("Book Found")
+                    print("Title:", title)
+                    print("Author:", author)
+                    found = True
+                    break
+            if not found:
+                print("Book not found")
+    except FileNotFoundError:
+        print("File not found")
+def delete_booke():
+    delete_booke = input("enter title to delete:")
+    try:
+        with open("books.txt" , "r") as file:
+            data = file.readlines()
+            found = False
+            with open("books.txt" , "w") as file:
+                for line in data:
+                    title , author = line.strip().split(",")
+                    if title.lower() != delete_booke.lower():
+                        file.write(line)
+                    else:
+                        found = True
+                if found:
+                    print("Book deleted successfully")
+                else:
+                    print("Book not found")
+    except FileNotFoundError:
+        print("File not found")
+while True:
+    print("\n1. Add books")
+    print("2. view books")
+    print("3. search books")
+    print("4. delete books")
+    print("5. Exit")
+    print()
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        add_books()
+    elif choice == "2":
+        view_books()
+    elif choice == "3":
+        search_books()
+    elif choice == "4":
+        delete_booke()
+    elif choice == "5":
+        print("Program closed")
+        break
+    else:
+        print("Invalid choice")
